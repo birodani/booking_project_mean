@@ -1,4 +1,7 @@
-# RbnbProject
+# Booking Project
+
+It's a home tutorial project for improve my skills. 
+It will use MEAN stack.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
