@@ -12,20 +12,20 @@ import { Rental } from '../shared/rental.model';
 export class RentalDetailComponent implements OnInit {
 
     public rentalId;
-    public currentRental:Rental;
+    public rental: Rental;
 
-    constructor(private activatedRoute: ActivatedRoute, private rentalService: RentalService) {   
+    constructor(private activatedRoute: ActivatedRoute, private rentalService: RentalService) {
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.activatedRoute.params.subscribe(
-            (params) => this.getRentalById( params['rentalId'])
+            (params) => this.getRentalById(params['rentalId'])
         )
     }
 
     getRentalById(rentalId: string) {
         this.rentalService.geRentalById(rentalId).subscribe(
-            (rental) => this.currentRental=rental
+            (rental) => this.rental = rental
         )
     }
 }
