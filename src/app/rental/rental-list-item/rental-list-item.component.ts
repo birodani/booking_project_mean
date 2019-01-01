@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RentalService } from '../shared/rental.service';
+import { log } from 'util';
+import { Rental } from '../shared/rental.model';
 
 @Component({
   selector: 'app-rental-list-item',
@@ -9,10 +11,12 @@ import { RentalService } from '../shared/rental.service';
 export class RentalListItemComponent implements OnInit {
 
   @Input()
-  currentRental: any;
+  public rental: Rental;
 
   constructor() { }
 
-  ngOnInit() {  }
+  ngOnInit() {  
+    console.log(this.rental._id);
+  }
 
 }

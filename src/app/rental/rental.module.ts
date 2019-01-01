@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import {RentalService } from './shared/rental.service';
 import { RentalRoutingModule } from './rental-routing.module';
 import { RentalDetailComponent } from './rental-detail/rentail-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -18,7 +20,8 @@ import { RentalDetailComponent } from './rental-detail/rentail-detail.component'
     ],
     imports: [
         CommonModule,
-        RentalRoutingModule
+        RentalRoutingModule,
+        HttpClientModule
     ],
     providers: [
         RentalService
